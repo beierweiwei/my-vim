@@ -91,7 +91,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 
 " 文件搜索
-Plug 'wincent/command-t'
+" Plug 'wincent/command-t'
 
 " 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
 " 还有就是安装下载不下来啊
@@ -119,7 +119,12 @@ Plug 'vim-scripts/BOOKMARKS--Mark-and-Highlight-Full-Lines'
 
 " 基于标签的标识符列表插件
 Plug 'majutsushi/tagbar'
-
+" 基于js-tag tag生成方案
+" https://github.com/majutsushi/tagbar/wiki#jsctags-depends-on-tern--recommended-
+" 依赖tern_for_vim jstags
+"
+Plug 'ternjs/tern_for_vim'
+" 
 " 如何自动生成标签并引入
 Plug 'vim-scripts/indexer.tar.gz'
 " 上面插件，依赖下面两个插件
@@ -253,7 +258,7 @@ set number         " 开启行号显示
 set cursorline    " 高亮显示当前 - 行
 set cursorcolumn  " 高亮显示当前 - 列
 set hlsearch      " 高亮显示搜索结果
-" set nocompatible  " 不要使用vi的键盘模式，而是vim自己的 
+set nocompatible  " 不要使用vi的键盘模式，而是vim自己的 
 
 " 在处理未保存或只读文件的时候，弹出确认 
 set confirm 
@@ -370,7 +375,7 @@ set nofoldenable       " 启动 vim 时关闭折叠代码
 
 " Plug 'derekwyatt/vim-fswitch'
 " *.cpp 和 *.h 间切换
-nmap <silent> <Leader>sw :FSHere<cr>
+" nmap <silent> <Leader>sw :FSHere<cr>
 
 " <<<<<<<<<<
 
@@ -421,7 +426,7 @@ let g:SignatureMap = {
 let tagbar_left=1                      " 设置 tagbar 子窗口的位置出现在主编辑区的左边
 let tagbar_width=32                    " 设置标签子窗口的宽度
 let g:tagbar_compact=1                 " tagbar 子窗口中不显示冗余帮助信息
-nnoremap <Leader>ilt :TagbarToggle<CR> " 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
+nnoremap <Leader>tgt :TagbarToggle<CR> " 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
 
 " 设置 ctags 对哪些代码标识符生成标签
 let g:tagbar_type_css = {
